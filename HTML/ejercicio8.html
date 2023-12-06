@@ -1,16 +1,7 @@
-<!-- Create a registration form. The form should have the following fields:
-Email
-Password
-Name and Lastname
-Date of birth
-Telephone number
-A select for choosing plans: free plan, a group of 3 plans with increasing price, and a checkbox for a Pro Plan
-Credit card number
-CVC
-Expiration date
-Billing Address -->
+<!-- Given the starting form, validate the fields:
 
-
+- All fields should be marked as mandatory
+- Fields related to credit card and CVC should have a validation about the maximum length. -->
 
 <!DOCTYPE htmlL>
 <html lang = "en">
@@ -68,12 +59,12 @@ Billing Address -->
             <div>
                 <label for="creditcard_numbe">CreditCard Number:<abbr title="required">*</abbr></label>
                 <br>
-                <input id="creditcard_number" type="text" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                <input id="creditcard_number" type="text" inputmode="numeric" pattern="[0-9\s]{13,19}" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
             </div>
             <div>
                 <label for="cvc_number">cvc:<abbr title="required">*</abbr></label>
                 <br>
-                <input type="text" name="cvc_number" minlength="3" maxlength="3" placeholder="xxx">
+                <input type="text" name="cvc_number" maxlength="3" placeholder="xxx">
             </div>
             <div>
                 <label for="expiracion_date">Expiration Date:<abbr title="required">*</abbr></label>
@@ -92,7 +83,7 @@ Billing Address -->
             <input type="number" name="street_number">
         </div>
         <div>
-            <label for="extra_info">Extra info:</label>
+            <label for="extra_info">Extra info:<abbr title="required">*</abbr></label>
             <br>
             <input type="text" name="extra_info" placeholder="piso/departamento/número">
         </div>
