@@ -14,32 +14,32 @@
             <div>
                 <label for="email_address">Email address:<abbr title="required">*</abbr></label>
                 <br>
-                <input type="email" name="email_address">
+                <input type="email" name="email_address" required>
             </div>
             <div>
                 <label for="password">Password:<abbr title="required">*</abbr></label>
                 <br>
-                <input type="password" name="password" pattern="[A-Za-z]+" minlength="8">
+                <input type="password" name="password" pattern="[A-Za-z]+" minlength="8" required>
             </div>
             <div>
                 <label for="first_name">First Name:<abbr title="required">*</abbr></label>
                 <br>
-                <input type="text" name="first_name" pattern="[A-Za-z]+">
+                <input type="text" name="first_name" pattern="[A-Za-z]+" required>
             </div>
             <div>
                 <label for="last_name">Last Name:<abbr title="required">*</abbr></label>
                 <br>
-                <input type="text" name="last_name" pattern="[A-Za-z]+">
+                <input type="text" name="last_name" pattern="[A-Za-z]+" required>
             </div>
             <div>
                 <label for="date_of_birth">Date of Birth:<abbr title="required">*</abbr></label>
                 <br>
-                <input type="date" name="date_of_birth">
+                <input type="date" name="date_of_birth" required>
             </div>
             <div>
                 <label for="telephone_number">Telephone Number:<abbr title="required">*</abbr></label>
                 <br>
-                <input type="phone number" name="telephone_number">
+                <input type="phone number" name="telephone_number" required>
             </div>
             <div>
                 <label for="plans_services">Plans Services:<abbr title="required">*</abbr></label>
@@ -59,43 +59,43 @@
             <div>
                 <label for="creditcard_numbe">CreditCard Number:<abbr title="required">*</abbr></label>
                 <br>
-                <input id="creditcard_number" type="text" inputmode="numeric" pattern="[0-9\s]{13,19}" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                <input id="creditcard_number" type="text" inputmode="numeric" pattern="[0-9\s]{13,19}" maxlength="15" minlength="15" placeholder="xxxx xxxx xxxx xxxx" required>
             </div>
             <div>
                 <label for="cvc_number">cvc:<abbr title="required">*</abbr></label>
                 <br>
-                <input type="text" name="cvc_number" maxlength="3" placeholder="xxx">
+                <input type="text" name="cvc_number" maxlength="3" placeholder="xxx" required>
             </div>
             <div>
                 <label for="expiracion_date">Expiration Date:<abbr title="required">*</abbr></label>
                 <br>
-                <input type="date" name="expiracion_date" >
+                <input type="date" name="expiracion_date" required>
             </div>
             <h4>Billing Address:</h4>
         <div>
             <label for="street">Street:<abbr title="required">*</abbr></label>
             <br>
-            <input type="text" name="street">
+            <input type="text" name="street" required>
         </div>
         <div>
             <label for="street_number">Street Number:<abbr title="required">*</abbr></label>
             <br>
-            <input type="number" name="street_number">
+            <input type="number" name="street_number" required>
         </div>
         <div>
             <label for="extra_info">Extra info:<abbr title="required">*</abbr></label>
             <br>
-            <input type="text" name="extra_info" placeholder="piso/departamento/número">
+            <input type="text" name="extra_info" placeholder="piso/departamento/número" required>
         </div>
         <div>
             <label for="state">State:<abbr title="required">*</abbr></label>
             <br>
-            <input type="text" name="state">
+            <input type="text" name="state" required>
         </div>
         <div>
             <label for="zip_code">Zip code:<abbr title="required">*</abbr></label>
             <br>
-            <input type="number" name="zip_code">
+            <input type="number" name="zip_code" required>
         </div>
         <button>Submit</button>
     </form>
