@@ -1,0 +1,87 @@
+<!-- Create a HTML blog page.
+The page should have an article, a footer and a form.
+The article should have a title, a paragraph and background pictures.
+The form should have a mandatory email field and a submit button.
+Use semantic tags as much as possible. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <head>
+        <title>360º Noticias Blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:type" content="news.website"/>
+        <meta property="og:image" content="C:\Users\maria\Documents\GitHub\Develhope\HTML\img\360.icon.png"/>
+    </head>
+    <header>
+    <div>
+        <h2>360º NOTICIAS BLOG</h2>
+    </div>
+    </header>
+    <body>
+        <nav> 
+            <ul>
+                <li><a href="#default">Home</li>
+                <li><a href="#economia">Economía</a></li>
+                <li><a href="#sociales">Sociales</a></li>
+                <li><a href="#desempleo">Desempleo</a></li>
+            </ul>
+        </nav>
+        <form>
+        <div>
+            <label for="subscribe">Recibe lo último del 360º Blog en tu correo<abbr title="required">*</abbr></label>
+            <br/>
+            <input id="subscribe" type="email" name="subscribe" placeholder="Tu correo electrónico" required/>
+            <br/>
+            <button type="submit">Suscríbete</button>
+        </div>
+        </form>
+        <article>
+            <h2>Beneficios del trabajo remoto</h2>
+            <h/>
+            <picture>
+                <img src="C:\Users\maria\Documents\GitHub\Develhope\HTML\img\laptop.png" width="330w" heigt="330w" alt="laptop"/>
+            </picture>
+            <p>
+                Un claro beneficio es la eliminación del tiempo de desplazamiento, <br> 
+                mejorando la salud física y mental y abriendo paso al tiempo productivo <br> 
+                o de ocio en horas del día que antes se desperdiciaban. <br> 
+                Esta flexibilidad se adapta a las necesidades personales, <br> 
+                creando un equilibrio más armonioso entre la familia y el trabajo.
+                <br/>
+                <br/>
+                Además, junto a los beneficios personales, <br> 
+                el informe Global Workplace Analytics fortalece <br> 
+                la ventaja ambiental de la adopción del teletrabajo, <br> 
+                afirmando que se eliminan 600,000 automóviles por año <br> 
+                de las carreteras y que incluso trabajar de forma remota <br> 
+                la mitad de la semana puede reducir las emisiones <br> 
+                anuales en 54 millones de toneladas.<br> 
+                <br/>
+                <br/>
+                Otros pros incluyen la reducción de costos operativos para los <br> 
+                empleadores y la posibilidad de un modelo híbrido, <br> 
+                combinando oficina y trabajo remoto. El Índice de Tendencias <br> 
+                Laborales de Microsoft considera que la ampliación del <br> 
+                mercado laboral resultante del trabajo remoto/híbrido <br> 
+                es "uno de los aspectos más positivos" del trabajo remoto.<br> 
+            </p>
+            <picture>
+            <img src="C:\Users\maria\Documents\GitHub\Develhope\HTML\img\hands.png" width="330w" heigt="330w" alt="hands"/>
+            </picture>
+        </article>
+    </body>
+    <footer>
+        <nav> 
+            <ul>
+                <li><a href="#default">Home</li>
+                <li><a href="#economia">Economía</a></li>
+                <li><a href="#sociales">Sociales</a></li>
+                <li><a href="#desempleo">Desempleo</a></li>
+            </ul>
+            <input type="text" placeholder="Escribir consulta" name="submit">
+            <br/>
+            <button type="submit">Consulta</button>
+        </nav>
+    </footer>
+    </html>
