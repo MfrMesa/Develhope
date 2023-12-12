@@ -1,0 +1,23 @@
+/* Add to the first letter of the first paragraph the following properties:
+{
+    float: left;
+    color: darkred;
+    border: 3px ridge darkgoldenrod;
+    padding: 16px;
+    background-color: gold;
+    margin: 8px;
+}
+Add to the blockquote the quotation marks at the beginning and the end of the text.
+The link at the end of the page should have a CSS hover effect. And it should have a different color if it is already visited. */
+
+p : dir(l) {
+    float: left;
+    color: darkred;
+    border: 3px ridge darkgoldenrod;
+    padding: 16px;
+    background-color: gold;
+    margin: 8px;
+}
+
+
+overflow: hidden

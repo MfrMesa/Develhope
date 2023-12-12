@@ -1,0 +1,43 @@
+/* Starting from the card that you created in the HTML exercise, add the CSS properties. Look at the layout in the example.png. */
+
+/* cambie un poco el html anterior */
+
+* {
+    margin: 0;
+    padding: o;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+article{
+    border: 2px #dadedf solid;
+    margin: 15px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+    text-align: justify;
+}
+
+picture img{
+    border-bottom: 2px #dadedf solid;
+}
+
+h3 { 
+    padding: 15px;
+}
+
+article p{
+    padding: 0 30px 18px 15px;
+    border-bottom: 2px #dadedf solid;
+}
+dl dt{
+    padding: 15px;
+    border-bottom: 2px #dadedf solid;
+}
+
+.botton-links{
+    padding: 15px;
+}
+
+div a{
+    padding: 5px;
+}
