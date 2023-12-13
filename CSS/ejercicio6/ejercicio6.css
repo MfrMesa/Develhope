@@ -1,0 +1,104 @@
+/* Starting from the navbar you created in the HTML exercise called 'Navbar', add the CSS properties. 
+The Search button should have a hover effect (background green and white text). */
+/* **Suggestion**:
+Use the classes to apply the CSS rules instead of ids, tags, or inline style.  */
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    list-style-type: none;
+    border: 1px #2e2a2b solid ;
+    margin: 5;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2e2a2b;
+    border-bottom: 2px white solid;
+}
+
+h3{
+    float: left;
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 20px 15px 10px 10px;
+}
+
+
+li{
+    float: left;
+    list-style: none;
+}
+
+
+.home{
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 22px 10px 10px 10px;
+    text-decoration: none;
+}
+
+.linkbar{
+    display: block;
+    color: #c7c7c5;
+    font-weight: bold;
+    padding: 22px 10px 10px 10px;
+    text-decoration: none;
+}
+.dropdown{
+    color: #c7c7c5;
+    font-weight: bold;
+    padding: 22px 0 30px 10px;
+    text-decoration: none;
+    clear: left;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.downArrow{
+    color: #c7c7c5;
+    display:inline-block;
+    padding: 15px 10px 15px 5px;
+}
+
+.disable{
+    display: block;
+    color: #3d3d3b;
+    font-weight: bold;
+    padding: 22px 80px 10px 10px;
+    text-decoration: none;
+}
+
+.search{
+    display: block;
+    border-radius: 3px;
+    color: #e2e6e9;
+    border-color: #e2e6e9 0.5px solid;
+    float: left;
+    padding: 10px;
+    border-style: inherit;
+    margin: 10px 5px 10px 0;
+}
+
+.button{
+    margin: 10px 0 10px 0;
+    position: relative;
+    padding: 10px;
+    align-items: center;
+    border-radius: 3px;
+    overflow: hidden;
+    background: 0;
+    color:#27624c;
+    border-style: inherit;
+    border-color:#27624c;
+}
+
+button:hover{
+    color: white;
+    background-color:#27624c;
+    display: inline;
+}
