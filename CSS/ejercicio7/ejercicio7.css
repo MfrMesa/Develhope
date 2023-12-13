@@ -1,0 +1,24 @@
+/* Rewrite the rules using the CSS custom properties.
+**Suggestion**:
+Use the `:root `selector, defining there all the properties and use them in the `body`and `.ball `selectors */
+
+
+:root{
+    --black: #011212;
+    --orange: #ff8800;
+    --spaceside: calc(100px *1);
+    --spaceupdown: calc(100px *1);
+    --roundness: calc(50px *1);
+}
+
+
+body {
+    background-color: var(--black);
+}
+
+.ball {
+    width: var(--spaceside);
+    height: var(--spaceupdown);
+    background-color: var(--orange);
+    border-radius: var(--roundness);
+}
