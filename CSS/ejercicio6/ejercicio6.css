@@ -12,12 +12,11 @@ Use the classes to apply the CSS rules instead of ids, tags, or inline style.  *
 .navbar{
     list-style-type: none;
     border: 1px #231f20 solid ;
-    margin: 20;
-    padding: 0 0 0 15px; 
+    margin: 0;
+    padding: 0; 
     overflow: hidden;
     background-color: #231f20;
     border-bottom: 3px white solid;
-    width:850px;
 }
 
 h3{
@@ -25,39 +24,71 @@ h3{
     display: block;
     color: white;
     font-weight: bold;
-    padding: 20px 15px 10px 10px;
+    padding: 20px 30px 10px 30px;
 }
-
 
 li{
     float: left;
     list-style: none;
 }
 
-
 .home{
     display: block;
     color: white;
     font-weight: bold;
-    padding: 22px 10px 10px 10px;
+    padding: 22px 30px 20px 30px;
     text-decoration: none;
+    border-radius: 1px;
 }
 
 .linkbar{
     display: block;
     color: #abaeaa;
     font-weight: bold;
-    padding: 22px 10px 10px 10px;
+    padding: 22px 30px 20px 30px;
     text-decoration: none;
+    border-radius: 1px;
 }
-.dropdown{
-    color: #abaeaa;
-    font-weight: bold;
-    padding: 22px 0 30px 10px;
-    text-decoration: none;
-    clear: left;
-    vertical-align: middle;
+.dropbutton {
     display: inline-block;
+    color:#abaeaa;
+    padding: 22px 30px 20px 30px;
+    text-decoration: none;
+    border-radius: 1px;
+}
+
+li a:hover, .dropdown:hover .dropbutton {
+    background-color:#008059;
+    background-size: 50px;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px #67686c;
+    z-index: 1;
+}
+
+.drop-content a {
+    color:#231f20;
+    padding: 20px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.drop-content a:hover {
+    background-color: #c7c7c5;
+}
+
+.dropdown:hover .drop-content {
+    display: block;
 }
 
 span{
@@ -69,8 +100,9 @@ span{
     display: block;
     color: #4e4e50;
     font-weight: bold;
-    padding: 22px 80px 10px 10px;
+    padding: 22px 30px 20px 30px;   
     text-decoration: none;
+    border-radius: 1px;
 }
 
 /* no se porque despues de cambiar varias veces el color, deja de funcionar y no refleja los cambios en el explorer  */
@@ -81,9 +113,9 @@ span{
     border-radius: 4px;
     border-color:#eaeaea; 
     float: left;
-    padding: 10px 8px 10px 10px;
+    padding: 10px 15px 10px 20px;
     border-style: inherit;
-    margin: 10px 5px 10px 0;
+    margin: 10px 15px 10px 400px;
 }
 
 .button{

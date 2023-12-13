@@ -12,9 +12,16 @@ Use the classes to apply the CSS rules instead of ids, tags, or inline style. --
         <nav class="navbar"> 
             <h3>Navbar</h3>
             <ul>
-                <li><a href="#home" class="home">Home</a></li>
+                <li><a href="#home" class="home">Home</a></li>  
                 <li><a href="#link" class="linkbar">Link</a></li>
-                <li><a href="#dropdown" class="dropdown">Dropdown <span>&#9662</span></a>
+                <!-- indague y me pareció mejor hacerlo asi que con select -->
+                <li class="dropdown">
+                    <a class="dropbutton" href="drop">Dropdown <span>&#9662</span></a>
+                    <div class="drop-content">
+                    <a href="#">Usuario</a>
+                    <a href="#">Empresas</a>
+                    <a href="#">Contacto</a>
+                    </div>
                 </li>
                 <li><a href="#disabled" class="disabled">Disabled</a></li>
             </ul>
