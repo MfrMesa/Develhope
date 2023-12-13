@@ -4,19 +4,20 @@ The Search button should have a hover effect (background green and white text). 
 Use the classes to apply the CSS rules instead of ids, tags, or inline style.  */
 
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .navbar{
     list-style-type: none;
-    border: 1px #2e2a2b solid ;
-    margin: 5;
-    padding: 0;
+    border: 1px #231f20 solid ;
+    margin: 20;
+    padding: 0 0 0 15px; 
     overflow: hidden;
-    background-color: #2e2a2b;
-    border-bottom: 2px white solid;
+    background-color: #231f20;
+    border-bottom: 3px white solid;
+    width:850px;
 }
 
 h3{
@@ -44,13 +45,13 @@ li{
 
 .linkbar{
     display: block;
-    color: #c7c7c5;
+    color: #abaeaa;
     font-weight: bold;
     padding: 22px 10px 10px 10px;
     text-decoration: none;
 }
 .dropdown{
-    color: #c7c7c5;
+    color: #abaeaa;
     font-weight: bold;
     padding: 22px 0 30px 10px;
     text-decoration: none;
@@ -59,46 +60,45 @@ li{
     display: inline-block;
 }
 
-.downArrow{
+span{
     color: #c7c7c5;
-    display:inline-block;
-    padding: 15px 10px 15px 5px;
+    display:inline;
 }
 
-.disable{
+.disabled{
     display: block;
-    color: #3d3d3b;
+    color: #4e4e50;
     font-weight: bold;
     padding: 22px 80px 10px 10px;
     text-decoration: none;
 }
 
+/* no se porque despues de cambiar varias veces el color, deja de funcionar y no refleja los cambios en el explorer  */
+
 .search{
     display: block;
-    border-radius: 3px;
-    color: #e2e6e9;
-    border-color: #e2e6e9 0.5px solid;
+    color: #67686c; 
+    border-radius: 4px;
+    border-color:#eaeaea; 
     float: left;
-    padding: 10px;
+    padding: 10px 8px 10px 10px;
     border-style: inherit;
     margin: 10px 5px 10px 0;
 }
 
 .button{
     margin: 10px 0 10px 0;
-    position: relative;
-    padding: 10px;
-    align-items: center;
-    border-radius: 3px;
+    padding: 10px 12px 10px 12px;
+    border-radius: 5px;
     overflow: hidden;
     background: 0;
-    color:#27624c;
+    color:#008059;
     border-style: inherit;
-    border-color:#27624c;
+    border-color:#008059;
 }
 
 button:hover{
     color: white;
-    background-color:#27624c;
+    background-color: #008059;
     display: inline;
 }
