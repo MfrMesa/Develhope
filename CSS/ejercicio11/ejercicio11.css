@@ -1,0 +1,79 @@
+/* Try to replicate the layout in asset/layout4.png, using CSS Grid properties. The green and orange blocks are half as high as the yellow and red blocks. */
+
+*{
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+body{
+    display: grid;
+    gap: 2em;
+    width: 600px;
+    height: 500px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    text-align: left;
+}
+
+#green{
+    background-color:#b9f1b3;
+    grid-column: span 3;
+    height: 110px;
+    padding: 30px;
+}
+
+#yellow {
+    background-color: #fefda2;
+    height: 220px;
+    width: 200px;
+    grid-template-rows: 2;
+    grid-template-columns: 1;
+    padding: 30px;
+}
+
+#orange{
+    background-color: #f7cca9;
+    grid-row: 3;
+    grid-column: span 2;
+    height: 110px;
+    padding: 40px 30px 30px 30px;
+}
+
+#red {
+    background-color: #f6bfbc;
+    grid-template-rows: 2;
+    grid-template-columns: 2;
+    height: 220px;
+    width: 200px;
+    padding: 30px;
+}
+
+#blue{
+    background-color: #b7d8f3;
+    grid-row: span 2;
+    width: 200px;
+    padding: 30px;
+}
+
+section > ul{
+    display:grid;
+    gap: 10%;
+    list-style: none;
+    margin: 20px 20px 20px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+section > ul li{
+    display: grid;
+    height: 50px;
+    width: 80px;
+    background-color: white;
+    margin: 5px;
+    text-align: start;
+    text-indent: 8px;
+    justify-content: left;
+    align-content: center;
+
+}
