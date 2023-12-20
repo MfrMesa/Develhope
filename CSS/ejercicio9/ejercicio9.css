@@ -1,0 +1,87 @@
+/* Replicate the layout present in asset/layout1.png, using CSS Flexbox property. */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 30px;
+    display: flex;
+    position: relative;
+    border: rgb(222, 199, 222) 2px solid;
+    gap: 3rem;
+    align-items: stretch;
+    justify-content: center;
+}
+
+#green{ 
+    background-color:#b9f1b3;
+    height: 200ch;
+    width: 20ch;
+    padding: 60px 0px 0px 0px;
+    text-align: center;
+    order: 3;
+}
+
+
+#yellow{ 
+    background-color: #fefda2;
+    height: 200ch;
+    width: 20ch;
+    padding: 60px 0px 0px 0px;
+    text-align: center;
+    order: 1;
+}
+
+
+#yellow > ul li{
+    width: 80px;
+    height: 100px;
+    background-color: white;
+    list-style: none;
+    text-align: center;
+    line-height: 11ch;
+    margin: 20px 20px 20px 40px;
+
+}
+
+#red > ul li{
+    margin: 20px 20px 20px 40px;
+    width: 80px;
+    height: 100px;
+    background-color: white;
+    list-style: none;
+    text-align: center;
+    line-height: 11ch;
+}
+
+#orange{ 
+    background-color: #f7cca9;
+    height: 200ch;
+    width: 20ch;
+    padding: 60px 0px 0px 20px;
+    flex-grow: 2;
+    text-align: left;
+    order: 4;
+}
+
+
+#red{ 
+    background-color: #f6bfbc;
+    height: 200ch;
+    width: 20ch;
+    padding: 60px 0px 0px 20px;
+    order: 2;
+    text-align: left;
+}
+
+
+#blue{ 
+    background-color: #b7d8f3;
+    height: 200ch;
+    width: 20ch;
+    padding: 60px 0px 0px 0px;
+    text-align: center;
+    order: 5;
+}
