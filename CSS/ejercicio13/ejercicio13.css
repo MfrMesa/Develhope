@@ -1,0 +1,120 @@
+/* Try to replicate the layout displayed in asset/cards-desktop.jpg, cards-mobile.jpg (max-width: 375px), cards-tablet.jpg (max-width: 768px). 
+The created page should be responsive, both for the tablet view &#40;max-width: 768px&#41 and mobile view &#40;max-width: 375px&#41 */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1;
+    gap:30px;
+}
+
+.cards{
+    width: 300px;
+    height: 470px;
+    background: linear-gradient(#b6b6b6, #dddddd, white);
+    border: #dddddd solid 1px;
+    box-shadow: 3px 5px 3px #dddddd;
+    border-radius: 20px;
+}
+
+.text{
+    display: grid;
+    max-width: 300px;
+    max-height: 70px;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1px;
+    border: none;
+    align-items: center; 
+}
+
+.avatar{
+    grid-row: span 2;
+    margin-right: 10px;
+    padding: 20px 0px 0px 10px ;
+}
+
+
+h1{
+    text-align:left;
+    font-size:medium;
+    align-self: end;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+h2{
+    color: white;
+    font-size:medium;
+    text-align: left;
+    grid-column: 2;
+    grid-row: 2;
+    width: 200px;
+}
+
+h3{
+    font-size: xx-large;
+    font-weight:bolder;
+    align-self: end;
+    text-align: right;
+    grid-column: 3;
+    grid-row: 1;
+    padding-right: 8px;
+}
+
+picture > img{
+    width:300px;
+    height: 250px;
+    overflow: hidden;
+    border: #f5e2d4 1px solid;
+}
+
+#heart{
+    size:1cm;
+    padding: 5px 5px 5px 20px;
+    text-align: center;
+    font-size: large;
+    font-weight:bold;
+}
+
+#coment{
+    text-align: left;
+    font-size: large;
+    font-weight:bolder;
+}
+
+p{
+    padding:10px 10px 20px 10px;
+    text-align: justify;
+    width:280px;
+    height: 180px;
+}
+
+
+@media (max-width: 768px){
+    .cards {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 375px){
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+

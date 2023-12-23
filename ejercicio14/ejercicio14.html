@@ -1,0 +1,37 @@
+<!-- Make responsive the exercise 'Nav': below 768 pixels the navbar is replaced by an hamburger menu without functionalities, it just appears. 
+Try to create the hamburger menu both with CSS rules and using an icon. -->
+<!DOCTYPE htmlL>
+<html>
+    <head>
+        <link rel="stylesheet" href="ejercicio14.css"/>
+    </head>
+    <body>
+        <header>
+            <div class="contenedor">
+        <nav class="navbar"> 
+            <h3>Navbar</h3>
+            <input type="checkbox" id="menu-check">
+            <label id="menu" for="menu-check">
+                <span id="menu-abrir">&#9776</span>
+                <span id="menu-cerrar">X</span>
+            </label>
+            <ul>
+                <li><a href="#home" class="home">Home</a></li>  
+                <li><a href="#link" class="linkbar">Link</a></li>
+                <li class="dropdown">
+                    <a class="dropbutton" href="drop">Dropdown <span>&#9662</span></a>
+                    <div class="drop-content">
+                    <a href="#">Usuario</a>
+                    <a href="#">Empresas</a>
+                    <a href="#">Contacto</a>
+                    </div>
+                </li>
+                <li><a href="#disabled" class="disabled">Disabled</a></li>
+            </ul>
+        <input class="search" type="text" placeholder="Search" name="search">
+        <button class="button" type="search">Search</button>
+        </nav>
+    </div>
+    </header>
+    </body>
+    </html>

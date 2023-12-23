@@ -1,0 +1,133 @@
+/* /* /* /* Make responsive the exercise 'Nav': below 768 pixels the navbar is replaced by an hamburger menu without functionalities, it just appears. 
+Try to create the hamburger menu both with CSS rules and using an icon. */
+
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    list-style-type: none;
+    border: 1px #231f20 solid ;
+    margin: 0;
+    padding: 0; 
+    overflow: hidden;
+    background-color: #231f20;
+    border-bottom: 3px white solid;
+}
+
+h3{
+    float: left;
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 20px 30px 10px 30px;
+}
+
+li{
+    float: left;
+    list-style: none;
+}
+
+.home{
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 22px 30px 20px 30px;
+    text-decoration: none;
+    border-radius: 1px;
+}
+
+.linkbar{
+    display: block;
+    color: #abaeaa;
+    font-weight: bold;
+    padding: 22px 30px 20px 30px;
+    text-decoration: none;
+    border-radius: 1px;
+}
+.dropbutton {
+    display: inline-block;
+    color:#abaeaa;
+    padding: 22px 30px 20px 30px;
+    text-decoration: none;
+    border-radius: 1px;
+}
+
+li a:hover, .dropdown:hover .dropbutton {
+    background-color:#008059;
+    background-size: 50px;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px #67686c;
+    z-index: 1;
+}
+
+.drop-content a {
+    color:#231f20;
+    padding: 20px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.drop-content a:hover {
+    background-color: #c7c7c5;
+}
+
+.dropdown:hover .drop-content {
+    display: block;
+}
+
+span{
+    color: #c7c7c5;
+    display:inline;
+}
+
+.disabled{
+    display: block;
+    color: #4e4e50;
+    font-weight: bold;
+    padding: 22px 30px 20px 30px;   
+    text-decoration: none;
+    border-radius: 1px;
+}
+
+.search{
+    display: block;
+    color: #67686c; 
+    border-radius: 4px;
+    border-color:#eaeaea; 
+    float: left;
+    padding: 10px 15px 10px 20px;
+    border-style: inherit;
+    margin: 10px 15px 10px 400px;
+}
+
+.button{
+    margin: 10px 0 10px 0;
+    padding: 10px 12px 10px 12px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: 0;
+    color:#008059;
+    border-style: inherit;
+    border-color:#008059;
+}
+
+button:hover{
+    color: white;
+    background-color: #008059;
+    display: inline;
+}
+
