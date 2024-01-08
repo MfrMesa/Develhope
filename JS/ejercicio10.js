@@ -7,6 +7,6 @@ const order = {};
 //     console.log('City is required');
 // }
 
-if (order.city.length === 0) {
+if (!order?.customer?.address?.city) {
     console.log('City is required');
 }
