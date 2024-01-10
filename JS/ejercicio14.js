@@ -59,7 +59,7 @@ function uncompletedNotes(notes) {
 
     notes.forEach((notas) => {
         const incompleto = notas.todos.filter((todo) => !todo.done);
-        todosIncompleto = todosIncompleto.concat(incompleto);
+        todosIncompleto.push(incompleto);
     });
 
     return todosIncompleto;
@@ -67,3 +67,4 @@ function uncompletedNotes(notes) {
 
 const incompleto = uncompletedNotes(notes);
 console.log(incompleto);
+
