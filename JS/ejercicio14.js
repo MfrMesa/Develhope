@@ -20,13 +20,11 @@ const notes = [
 function uncompletedNotes(notes) {
     const uncompletedTodos = [];
 
-    notes.forEach(note => {
-        const uncompletedNoteTodos = note.todos.filter(todo => !todo.done);
-        uncompletedTodos.push({
-            ...note,
-            todos: uncompletedNoteTodos
-        });
+    notes.forEach((notas) => {
+        const incompleto = notas.todos.filter((todo) => !todo.done);
+        todosIncompleto = todosIncompleto.concat(incompleto);
     });
     return uncompletedTodos;   
 }    
 const incompleto = uncompletedNotes(notes);
+console.log(incompleto);
