@@ -31,4 +31,4 @@ function checkName(userId) {
 checkLoggedIn(5)
     .then(checkName)
     .then ((user) => console.log(user))
-    .catch((error) => console.log(error))
+    .catch((error) => console.error(error))
