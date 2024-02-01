@@ -9,10 +9,12 @@ const isLogged = true;
 
 function checkLoggedIn(userId) {
     return new Promise((resolve, reject) => {
-        if (isLogged) { 
-            resolve(userId);
-        } else {
-            reject(`${userId} is not logged in`);
+        const random = Math.random (); {
+            if (random > 0.5) { 
+                resolve(userId);
+            } else {
+                reject(`${userId} is not logged in`);
+            }
         }
     });
 }
@@ -28,7 +30,7 @@ function checkName(userId) {
 }
 
 
-checkLoggedIn(5)
+checkLoggedIn(isLogged)
     .then(checkName)
     .then ((user) => console.log(user))
     .catch((error) => console.error(error))
