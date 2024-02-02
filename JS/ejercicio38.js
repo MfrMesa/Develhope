@@ -7,30 +7,28 @@
 
 const isLogged = true;
 
-function checkLoggedIn(userId) {
+function checkLoggedIn(isLogged) {
     return new Promise((resolve, reject) => {
-        const random = Math.random (); {
-            if (random > 0.5) { 
-                resolve(userId);
-            } else {
-                reject(`${userId} is not logged in`);
-            }
+        const random = Math.random();
+        if (isLogged && random > 0.5) {
+            resolve(random);
+        } else {
+            reject(`${isLogged} no ha iniciado sesión`);
         }
     });
 }
 
-function checkName(userId) {
+function checkName(randomNumber) {
     return new Promise((resolve, reject) => {
-        if (userId > 0.5) {
-            resolve(`{name: "John", age: 24}`);
+        if (randomNumber > 0.5) {
+            resolve({ nombre: "John", edad: 24 });
         } else {
             reject(`error`);
         }
     });
 }
 
-
 checkLoggedIn(isLogged)
     .then(checkName)
-    .then ((user) => console.log(user))
-    .catch((error) => console.error(error))
+    .then((usuario) => console.log(usuario))
+    .catch((error) => console.error(error));
