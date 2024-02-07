@@ -1,0 +1,42 @@
+<!-- # Network Requests
+Using async and await, implement the necessary code to recover the Todo with ID 4 through the following URL: 
+[link](https://jsonplaceholder.typicode.com/todos/4) . Then create two elements:An `<h2>` element containing the Todo title (title property)
+An `<Input Type = "Checkbox"> `with the Checked property set to the value present for the complete property of the Todo
+Append the two elements previously created inside the container. -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <body>
+    <div id="container" style="display: flex; align-items: center;"></div>
+    </body>
+</html>
+
+<script>
+    async function recover() {
+    
+        try {
+        let response = await fetch("https://jsonplaceholder.typicode.com/todos/4");
+        let todo = await response.json();
+
+        const $container = document.getElementById("container");
+                
+        const $newTitle = document.createElement("h2");
+        $newTitle.innerText = todo.title;
+
+        const $newInput = document.createElement("input");
+        $newInput.type = "checkbox";
+        $newInput.checked = todo.completed;
+
+        $container.appendChild($newTitle);
+        $container.appendChild($newInput);
+
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
+        recover();
+    </script>

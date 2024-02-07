@@ -9,5 +9,5 @@ const user = {
 
   localStorage.setItem("user", JSON.stringify(user));
 
-  const storedUser = JSON.parse(localStorage.getItem("user"));
-  console.log(storedUser);
+  // const storedUser = JSON.parse(localStorage.getItem("user"));
+  // console.log(storedUser);
