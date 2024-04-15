@@ -1,0 +1,3 @@
+ALTER TABLE books 
+ADD COLUMN publisher VARCHAR(50)
+ADD COLUMN number_of_pages NOT NULL
