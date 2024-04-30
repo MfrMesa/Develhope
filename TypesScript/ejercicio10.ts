@@ -26,3 +26,10 @@ let planets = [
     {id: 1, name: "Tierra"},
     {id: 2, name: "Marte"},
 ]
+
+
+//start server
+app.listen(port, () => {
+    console.log(`Usando http://localhost:${port}`);
+})
+

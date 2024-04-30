@@ -67,11 +67,10 @@ app.post("/api/planets/", (req, res) => {
 
 //pedidos put
 app.put("/api/planets/:id", (req, res) => {
-    const { error } = planetSchema.validate(req.params.id);
+    const { error } = planetSchema.validate(req.body);
     if (error) return res.status(400).json({ mensaje: error.details[0].message });
 
-    const {id} = req.params;
-    const {name} = req.body;
+    const {id, name} = req.body;
     planets = planets.map ( p => p.id === Number(id) ? ({...p, name}) : p)
     console.log(planets)
 
@@ -82,8 +81,6 @@ app.put("/api/planets/:id", (req, res) => {
 //pedidos delete
 
 app.delete("/api/planets/:id", (req, res) => {
-    const { error } = planetSchema.validate(req.params.id);
-    if (error) return res.status(400).json({ mensaje: error.details[0].message });
 
     const {id} = req.params;
     planets = planets.filter((p) => p.id !== Number(id))
