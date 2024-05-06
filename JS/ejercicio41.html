@@ -6,6 +6,9 @@ The post data must be transmitted following the compilation of a form. -->
 
 
 
+
+
+
 <html>
     <body>
     <div id="container">
@@ -26,9 +29,14 @@ The post data must be transmitted following the compilation of a form. -->
 </html>
 
 <script>
+    //Se selecciona el elemento del documento con el ID todo-form  y se agrega un event 
+    //listener para el evento de envío (submit).
     document.getElementById('todo-form').addEventListener('submit', async function(event) {
+    
+    //Se utiliza event.preventDefault() para evitar el comportamiento predeterminado del formulario, que sería recargar la página, asi logramos una mejor experiencia de usuario.
     event.preventDefault();
 
+    //Se obtienen los valores del título y del campo de completado del formulario.
     const title = document.getElementById('todo-title').value;
     const completed = document.getElementById('todo-completed').checked;
 
@@ -44,6 +52,7 @@ The post data must be transmitted following the compilation of a form. -->
         }),
     });
 
+    //La respuesta (que debería ser el nuevo "post" creado) se almacena en la variable newPost.
     const newPost = await response.json();
     console.log('Nuevo post creado:', newPost);
     } catch (error) {
@@ -51,3 +60,8 @@ The post data must be transmitted following the compilation of a form. -->
     }
 });
 </script>
+
+<!-- 
+En resumen, este código realiza una solicitud POST a la API JSONPlaceholder para crear un nuevo "post" 
+utilizando los datos del formulario cuando se envía dicho formulario.
+El uso de async/await facilita la escritura de código asíncrono de manera más legible y estructurada. -->

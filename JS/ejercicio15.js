@@ -22,4 +22,4 @@ function sortPeopleByAge(people) {
 }
 
 const sortingByAge = sortPeopleByAge(people)
-console.log(sortingByAge)
+// console.log(sortingByAge)

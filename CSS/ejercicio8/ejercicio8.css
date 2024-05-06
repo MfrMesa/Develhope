@@ -1,45 +1,40 @@
-
 *{
     margin: 0;
     padding: 0;
 }
 
 div{
-    margin: 30px;
     display: flex;
-    position: relative;
-    border: rgb(222, 199, 222) 2px solid;
-    align-items: stretch;
-    justify-content: start;
-}
-
-nav{
-    border: palevioletred 1px solid;
     width: 200px;
     height: 100%;
-}
-
-
-nav > ul li{
-    display: flex;
     flex-direction: column;
-    flex: 1;
-    align-items: left;
-    width: 20ch;
-    height: 19ch;
-    padding: 20px;
+    position: relative;
+    border: 3px solid gray;
 }
+
+
+li > div{
+    flex: 1;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 2px solid coral;
+    border-radius: 3px;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
 
 a{ 
     padding: 20px;
     margin: 20px;
-    align-items: left;
+    align-items: center;
+    border: 2px solid coral;
     color: #2b2b2b;
     justify-content: left;
     list-style: none;
     text-align: center; 
     text-decoration: none;
-    border: 2px solid coral;
 }
 
 a:hover{
@@ -47,11 +42,7 @@ a:hover{
     transition: 0.3s;
 }
 
-.user{
-    display: flex;
-    align-items: center;
-    border: none;
-}
+
 
 
 

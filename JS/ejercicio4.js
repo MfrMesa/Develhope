@@ -15,4 +15,5 @@ function sumUntil(maxValue) {
 
 console.log(sumUntil(5));
 
-
+// ponemos <= maxValue en vez de un numero porque en console.log(sumUntil(5)); ya nos estan dando el numero a tomar como parametro.
+// de lo contrario dejariamos vacio console.log(sumUntil()); y colocariamos <= 5

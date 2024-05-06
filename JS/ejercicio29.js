@@ -12,6 +12,7 @@ class Person {
 
 const developer = new Person(1, 'Mario', 'Rossi', 25);
 
+// Convertir a JSON
 const developerJSON = JSON.stringify(developer);
 
 console.log(developerJSON);

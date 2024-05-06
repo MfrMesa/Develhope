@@ -5,13 +5,13 @@
 // Print in the console the function output.
 // Example: `multiplyByTwo(4)()`, result: `8`
 
-function multiplyByTwo(value) {
-    let number = 2;
-    function inner () {
-       let mult = value * number;
-    return mult;
-    }
-    return inner;
+function multiplyByTwo(valor){
+    let number = 5;
+    return function inner() {
+        let mult = valor * number;
+        return mult;
+    }; 
 }
+console.log(multiplyByTwo(8)());
 
-console.log(multiplyByTwo(5)());
+// se usan ()() porque en uno guarda el output y en el otro la funcion a llamar

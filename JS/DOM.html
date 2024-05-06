@@ -1,0 +1,327 @@
+<!-- Ejercicios de practica del DOM: -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <button type="button" id="boton">HOLA</button>
+            <form>
+                <input type="text" id="name" required>
+                <input type="mail" id="mail" required>
+                <input type="password" id="pass" required>
+                <button type="submit">boton</button>
+            </form>
+            <div id="timer"></div>
+            <picture>
+                <img id="imagen" width="300px" height="300px" src="img/perro.jpeg" style=" display: none;">
+                <button id="imagenBoton" type="button">boton</button>
+            </picture>
+            <p id="parrafo" style="color:gray; font-size: 14px;">parrafo muy largo</p>
+            <div>
+                <ul>
+                    <li id="listaItem">Agregar items
+                        <input id="campo" type="text">
+                    </li>
+                    <button id="listaBoton" type="button">agregar</button>
+                </ul>
+            </div>
+        </body>
+<!-- 
+Cambio de color de fondo:
+Crea una página HTML con un botón. Cuando se haga clic en el botón, cambia el color de fondo de la página.  -->
+
+<script>
+
+    document.getElementById("boton").addEventListener("click", event => {
+        let body = document.body;
+        if (body.style.backgroundColor === "white") {
+            body.style.backgroundColor = "black";
+        } else (body.style.backgroundColor = "black")
+    })
+
+</script>
+
+
+<!-- Contador de clics:
+Haz una página con un botón que cuente cuántas veces se ha hecho clic en él. Muestra el número de clics en la página.  -->
+
+
+<script>
+
+document.addEventListener("click", event => {
+    let boton = document.getElementById("boton");
+    if(boton.clicked) {
+        boton.clicked += 1;
+    } else {
+        boton.clicked = 1;
+    }
+    console.log( `Boton clicked:  ${boton.clicked}`);
+})
+
+</script> 
+
+
+<!-- Lista de tareas:
+Crea una lista de tareas donde puedes agregar nuevas tareas, marcarlas como completadas y eliminarlas. -->
+
+
+<script>         //VOLVER A HACER 
+
+
+let body = document.querySelector("body");
+
+let tareasLista = document.createElement("ul");
+
+let tarea = document.createElement("li");
+
+let checkbox = document.createElement("button");
+
+checkbox.type = "checkbox";
+
+checkbox.addEventListener("change", () => {
+    if (this.checked) {
+        // Marcar la tarea como completada
+        tarea.classList.add("completada");
+        console.log("Tarea completada");
+    } else {
+        // Marcar la tarea como no completada
+        tarea.classList.remove("completada");
+        console.log("Tarea no completada");
+    }
+});
+
+tarea.textContent = "Mi tarea";
+
+tareasLista.appendChild(tarea);
+tarea.appendChild(checkbox);
+
+body.appendChild(tareasLista);
+
+
+</script>
+
+
+<!-- Validación de formulario:
+Diseña un formulario simple con campos como nombre, correo electrónico y contraseña. 
+Utiliza JavaScript para validar que todos los campos estén llenos antes de enviar el formulario. -->
+
+<script>
+
+let inputs = document.querySelectorAll("input");
+let completado = true;
+
+inputs.forEach(input => {
+    if (input.value === "") {
+        completado = false;
+    }
+});
+
+if (completado) {
+    console.log("Completado");
+} else {
+    console.log("Campos requeridos");
+}
+
+</script> 
+
+<!-- Galería de imágenes:
+Crea una galería de imágenes en la que puedas hacer clic en una miniatura y ver la imagen a tamaño completo. -->
+
+<script>
+
+document.addEventListener("click", () => {
+    let img = document.getElementById("imagen");
+
+    if (img.style.width === "300px" && img.style.height === "300px") {
+        img.style.width = "200px";
+    } else {
+        img.style.width = "300px";
+        img.style.height === "300px";
+    }
+});
+
+</script>
+
+
+<!-- Manipulación de Texto:
+Crea una lista (ul) de elementos (li) en HTML. Utiliza JavaScript para cambiar el texto de uno de los elementos de la lista. -->
+
+<script>
+
+    let container = document.querySelector("body");
+
+    let lista = document.createElement("ul");
+        container.appendChild(lista);
+
+    let items = document.createElement("li");
+        lista.appendChild(items);
+
+    let item1 = document.createElement("li");
+        lista.appendChild(item1);
+
+    let item2 = document.createElement("li");
+        lista.appendChild(item2);
+
+        item1.innerText = "Lista de items 1";
+
+        item2.innerText = "Lista de items 2";
+
+</script> 
+
+<!-- 
+Agregar y Eliminar Elementos:
+Crea una lista vacía (ul) y un botón. Utiliza JavaScript para agregar un nuevo elemento a la lista cada vez que se hace clic en el botón.  -->
+
+<script>
+
+    let cuerpo = document.querySelector("body");
+
+    let list = document.createElement("ul");
+        cuerpo.appendChild(list);
+
+    let botones = document.createElement("button");
+        list.append(botones);
+
+        botones.addEventListener("click", () => {
+        if(botones.clicked = true){
+            let item = document.createElement("li")
+            item.innerText = "Nueva lista"
+            list.appendChild(item)
+        } else{
+            console.log("Boton no clickeado")
+        }
+    })
+
+</script> 
+
+
+<!-- Cambiar Imagen:
+Crea una página con una imagen y un botón. Utiliza JavaScript para cambiar la imagen cuando se hace clic en el botón. -->
+
+<script>
+
+    let boton = document.getElementById("imagenBoton").addEventListener("click", () => {
+        let imagen = document.getElementById("imagen"); 
+        imagen.src="img/perro2.jpg";
+    })
+
+</script> 
+
+
+<!-- Toggle de Clase:
+Crea un elemento (por ejemplo, un párrafo) con un estilo CSS aplicado. 
+Utiliza JavaScript para alternar la clase del elemento cuando se hace clic en él, cambiando así su estilo. -->
+
+<script>
+
+    document.addEventListener("click", () => {
+            let texto = document.getElementById("parrafo");
+
+            // Verifica el estilo actual y aplica un nuevo estilo
+            if (texto.style.color === "black" && texto.style.fontSize === "14px") {
+                texto.style.color = "purple";
+                texto.style.fontSize = "20px";
+            } else {
+                // Establece el estilo inicial si no coincide con el estilo actual
+                texto.style.color = "black";
+                texto.style.fontSize = "14px";
+            }
+        });
+
+</script> 
+
+
+<!-- Temporizador Simple:
+Mostrar imagen despues de 3 segundos. -->
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        let imagenTimer = document.getElementById("imagen");
+
+        setTimeout(() => {
+            imagenTimer.style.display = "block";
+        }, 3000);
+    })
+
+</script>
+
+
+<!-- Temporizador Simple:
+Crea un temporizador que cuente hacia atrás desde 10 hasta 0 en una página HTML. 
+Utiliza JavaScript para actualizar el contenido de la página en tiempo real. -->
+
+<script>
+
+let segundos = 10;
+
+function actualizarTemporizador() {
+
+    let temporizadorElemento = document.getElementById("timer");
+
+    temporizadorElemento.textContent = "Tiempo restante: " + segundos;
+
+    // Reduce el contador en 1 segundo
+    segundos--;
+
+    // Si el temporizador llega a 0, para el temporizador y muestra un mensaje
+    if (segundos < 0) {
+        clearInterval(temporizadorInterval);
+        temporizadorElemento.textContent = "¡Tiempo agotado!";
+    }
+}
+
+// Actualiza el temporizador cada segundo
+let temporizadorInterval = setInterval(actualizarTemporizador, 1000);
+
+
+</script> 
+
+<!-- Lista Dinámica:
+Crea una lista en tu HTML.
+Añade un campo de entrada y un botón.
+Cuando se haga clic en el botón, agrega un nuevo elemento a la lista con el contenido del campo de entrada. -->
+
+<script>
+
+        document.getElementById("listaBoton").addEventListener("click", () => {
+            let campos = document.getElementById("campo").value;
+
+            if (campos.trim() !== "") {
+
+                let newItem = document.createElement("li");
+
+                // Añadir el contenido del campo al nuevo elemento li
+                newItem.textContent = campos;
+
+                let lista = document.getElementById("listaItem");
+
+                lista.appendChild(newItem);
+
+                // Limpiar el campo de entrada
+                document.getElementById("campo").value = "";
+            } else {
+                console.error("Error: El campo está vacío.");
+            }
+        });
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

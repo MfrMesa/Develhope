@@ -23,10 +23,10 @@ async function getResults(){
         const info = await Promise.all(players.map(async player => {
             try {
                 const result = await luckyDraw(player);
-                console.log(result); 
+                console.log(result); // Log resolved value
                 return result;
             } catch (error) {
-                console.error(error.message); 
+                console.error(error.message); // Log rejection reason
                 throw error;
             }
         }));
@@ -37,4 +37,5 @@ async function getResults(){
         throw error;
     }
 }
+
 getResults()

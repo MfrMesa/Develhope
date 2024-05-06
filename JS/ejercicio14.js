@@ -26,10 +26,17 @@ function uncompletedNotes(notes) {
             ...note,
             todos: uncompletedNoteTodos
         });
-
+        
     });
     return uncompletedTodos;   
 }    
 const incompleto = uncompletedNotes(notes);
+// Llama a la función con una variable 'notes' y almacena el resultado en 'incompleto'.
 console.log(incompleto);
 
+// creamos una nueva array para guardar el resultado
+// el foreach recorre el array guardandolos en la nueva array
+// el filter filtra todos los que son distintos a true de la nueva array
+// y los guarda en la nueva array
+// ...note : Propaga las propiedades de la nota actual.
+// todos: uncompletedNoteTodos    :  reemplaza la propiedad todos con los nuevos todos no completados

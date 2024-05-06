@@ -11,5 +11,6 @@ const user = {
 localStorage.setItem("user", JSON.stringify(user));
 
 
+// recupera la cadena JSON asociada con la clave "user" desde el localStorage y la convierte de nuevo a un objeto JavaScript mediante JSON.parse
 const storedUser = JSON.parse(localStorage.getItem("user"));
 console.log(storedUser);

@@ -16,9 +16,11 @@ const person1 = {
     }
 };
 
-
+//Crear una copia profunda de person1 usando JSON.parse y JSON.stringify
 const person2 = JSON.parse(JSON.stringify(person1));
 
+
+// Modificar la ciudad en person2 sin afectar a person1
 person2.address.city = 'Milan';
 
 console.log(person1);

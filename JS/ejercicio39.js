@@ -5,17 +5,18 @@ const isLogged = true;
 
 function checkLoggedIn(userId) {
     return new Promise((resolve, reject) => {
-        if (isLogged) {
-            resolve(userId);
+        const random = Math.random();
+        if (isLogged && random > 0.5) {
+            resolve(random);
         } else {
             reject(new Error(`${userId} is not logged in`));
         }
     });
 }
 
-function checkName(userId) {
+function checkName(randomNumber) {
     return new Promise((resolve, reject) => {
-        if (userId > 0.5) {
+        if (randomNumber > 0.5) {
             resolve(`{name: "John", age: 24 }`);
         } else {
             reject(new Error("error"));
@@ -23,8 +24,10 @@ function checkName(userId) {
     });
 }
 
-checkLoggedIn(5)
+checkLoggedIn(isLogged)
     .then(checkName)
-    .then((user) => console.log(user))
+    .then((usuario) => console.log(usuario))
     .catch((error) => console.error(error))
     .finally(() => console.log("Promise ready"));
+
+

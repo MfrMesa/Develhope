@@ -2,14 +2,14 @@
 // The nickname must be composed as follows: `<name>-<age>`.
 
 function nicknameMap(persons) {
-let nicknames = []; 
+let nicknames = []; // nueva array
 
     for (let i = 0; i < persons.length; i++) { 
-        let nickname = persons[i].name + " " + persons[i].age; 
-        nicknames.push(nickname); 
+        let nickname = persons[i].name + "-" + persons[i].age; 
+        nicknames.push(nickname); //crea la nueva array
     }
 
-    return nicknames; 
+    return nicknames; //imprime la nueva array
 }
 
 const persons = [
@@ -25,7 +25,7 @@ const persons = [
     { name: 'Alice', age: 28 }
 ];
 
-const nicknames = nicknameMap(persons); 
+const nicknames = nicknameMap(persons); // se guarda en esta array
 
 console.log(nicknames); 
 console.log(persons); 

@@ -16,19 +16,22 @@ function luckyDraw(player) {
 }
 
 
+// Define the players
 const players = ["Joe", "Caroline", "Sabrina"];
 
+// Create a promise chain for each player
 const promiseChain = players.map(player => {
     return luckyDraw(player)
         .then(result => {
-            console.log(result); 
+            console.log(result); // Log resolved value
         })
         .catch(error => {
-            console.error(error.message); 
+            console.error(error.message); // Log rejection reason
         });
 });
 
 
+// Wait for all promises in the chain to settle
 Promise.all(promiseChain)
     .then(() => {
         console.log("All draws completed.");

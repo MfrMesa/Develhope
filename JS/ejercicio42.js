@@ -7,6 +7,7 @@ const user = {
     age: 25,
   };
 
+  //// Guarda el objeto 'user' en localStorage, convirtiéndolo a formato JSON
   localStorage.setItem("user", JSON.stringify(user));
 
   // const storedUser = JSON.parse(localStorage.getItem("user"));

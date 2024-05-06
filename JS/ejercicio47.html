@@ -39,7 +39,7 @@ Age: 25 -->
     let input = label.nextElementSibling;
 
     if (input && (input.type === "text" || input.type === "number")) {
-
+        //asegura que input no sea nulo o indefinido, y al mismo tiempo, verifica que el tipo del elemento de entrada sea "text" o "number".
         console.log(`${label.textContent}: ${input.value}`);
     }
     });

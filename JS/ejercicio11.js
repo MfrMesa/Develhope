@@ -18,7 +18,7 @@ const persons = [
 const adults = adultFilter(persons);
 
 function adultFilter(persons) {
-    let adultos = persons.filter ((el) => el.age >= 18); 
+    let adultos = persons.filter ((el) => el.age >= 18);  //colocar el elemento a buscar dentro de los parentesis, sin dejar de usar el (el)
     console.log(adultos);
     return adultos;
 }

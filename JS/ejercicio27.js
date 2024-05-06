@@ -19,3 +19,8 @@ const person = {
 const { id, ...personInfo } = person;
 
 console.log(id, personInfo);
+
+// En este código, he utilizado el operador rest (...personInfo) en la asignación por destructuración 
+// para extraer todas las propiedades de person excepto id. 
+// El resultado es que id se asigna directamente, y personInfo contendrá un objeto con las demás propiedades. 
+

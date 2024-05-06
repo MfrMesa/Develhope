@@ -7,10 +7,10 @@
 async function recover() {
     try {
         let response = await fetch("https://jsonplaceholder.typicode.com/todos");
-        let todos = await response.json(); 
-        console.log("Lista de Todos:", todos);
+        let todos = await response.json(); //Si la respuesta es exitosa, se utiliza response.json() para extraer y parsear los datos JSON de la respuesta. Luego, se imprime la lista de Todos en la consola.
+        console.log("Lista de To dos:", todos);
     } catch(err) {
-        console.error(err); 
+        console.error(err); // TypeError: failed to fetch
     }
 }
 recover();
